@@ -9,7 +9,7 @@ class App {
 
   constructor() {
     this.app = express();
-    this.config();    
+    this.config();
   }
 
   private config(): void {
