@@ -10,7 +10,8 @@
     "start": "ts-node src/server.ts",
     "build": "npm run tslint && npm run build-ts",
     "deploy": "npm run build && sls deploy",
-    "checkit": "npm run build && sls offline"
+    "checkit": "npm run build && sls offline",
+    "test-watch": "jest --watch --config jest-config.json"
   },
   "repository": {
     "type": "git",
@@ -31,10 +32,15 @@
     "express": "^4.16.4"
   },
   "devDependencies": {
+    "@types/jest": "^23.3.11",
     "@types/node": "^10.12.18",
+    "@types/supertest": "^2.0.7",
+    "jest": "^23.6.0",
     "nodemon": "^1.18.9",
     "serverless": "^1.35.1",
     "serverless-offline": "^3.31.3",
+    "supertest": "^3.3.0",
+    "ts-jest": "^23.10.5",
     "ts-node": "^7.0.1",
     "tslint": "^5.12.0",
     "typescript": "^3.2.2"
