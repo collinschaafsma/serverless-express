@@ -1,0 +1,42 @@
+{
+  "name": "swole",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon --watch 'src/**/*' -e ts,tsx --exec ts-node src/server.ts",
+    "build-ts": "tsc",
+    "tslint": "tslint -c tslint.json -p tsconfig.json",
+    "start": "ts-node src/server.ts",
+    "build": "npm run tslint && npm run build-ts",
+    "deploy": "npm run build && sls deploy",
+    "checkit": "npm run build && sls offline"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/collinschaafsma/swole.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/collinschaafsma/swole/issues"
+  },
+  "homepage": "https://github.com/collinschaafsma/swole#readme",
+  "dependencies": {
+    "@types/aws-serverless-express": "^3.3.0",
+    "@types/cors": "^2.8.4",
+    "aws-serverless-express": "^3.3.5",
+    "cors": "^2.8.5",
+    "express": "^4.16.4"
+  },
+  "devDependencies": {
+    "@types/node": "^10.12.18",
+    "nodemon": "^1.18.9",
+    "serverless": "^1.35.1",
+    "serverless-offline": "^3.31.3",
+    "ts-node": "^7.0.1",
+    "tslint": "^5.12.0",
+    "typescript": "^3.2.2"
+  }
+}
