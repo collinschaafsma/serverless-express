@@ -4,7 +4,7 @@ provider:
   name: aws
   runtime: nodejs8.10
   stage: ${opt:stage, 'dev'}
-  region: us-west-1
+  region: us-east-1
 
 package:
   exclude:
@@ -17,7 +17,7 @@ package:
 functions:
   http:
     handler: dist/handler.http
-    timeout: 3
+    timeout: 6
     events:
       - http: ANY /
       - http: ANY /{proxy+}
